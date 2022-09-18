@@ -5,7 +5,9 @@ $color1: #00c8ff;
 $color2: #a8b0ff;
 $color3: #209ce3;
 
-$tablet: 1199px;
+$desktop: 1399px;
+$tablet: 899px;
+$mobile: 619px;
 
 section {
 	width: 100%;
@@ -20,6 +22,7 @@ section {
 	article {
 		width: 20%;
 		height: 25%;
+		min-height: 200px;
 	}
 	//text type
 	article.txt {
@@ -274,14 +277,59 @@ section {
 	}
 }
 
-@media screen and (max-width: $tablet) {
-}
-
 @keyframes ani {
 	0% {
 		transform: rotateX(0deg) rotateY(0deg);
 	}
 	100% {
 		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+
+@media screen and (max-width: $desktop) {
+	section {
+		height: auto;
+
+		article {
+			width: 33.333%;
+			height: 220px;
+		}
+		article.blank {
+			display: none;
+		}
+		article.custom1,
+		article.custom6 {
+			width: 66.666%;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	section {
+		article {
+			width: 50%;
+		}
+		article.custom1,
+		article.custom6 {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	section {
+		article {
+			width: 100%;
+		}
+		article.custom1 {
+			height: 300px;
+		}
+		article.custom6 {
+			height: 360px;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-content: center;
+			padding: 30px;
+		}
 	}
 }

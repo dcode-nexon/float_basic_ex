@@ -27,6 +27,7 @@ section {
 section article {
   width: 20%;
   height: 25%;
+  min-height: 200px;
 }
 section article.txt {
   padding: 30px;
@@ -253,6 +254,46 @@ section article.custom6 .tit p {
   }
   100% {
     transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@media screen and (max-width: 1399px) {
+  section {
+    height: auto;
+  }
+  section article {
+    width: 33.333%;
+    height: 220px;
+  }
+  section article.blank {
+    display: none;
+  }
+  section article.custom1,
+section article.custom6 {
+    width: 66.666%;
+  }
+}
+@media screen and (max-width: 899px) {
+  section article {
+    width: 50%;
+  }
+  section article.custom1,
+section article.custom6 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 619px) {
+  section article {
+    width: 100%;
+  }
+  section article.custom1 {
+    height: 300px;
+  }
+  section article.custom6 {
+    height: 360px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
   }
 }
 
