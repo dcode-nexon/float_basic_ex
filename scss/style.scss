@@ -5,6 +5,8 @@ $color1: #00c8ff;
 $color2: #a8b0ff;
 $color3: #209ce3;
 
+$tablet: 1199px;
+
 section {
 	width: 100%;
 	height: 100vh;
@@ -220,8 +222,8 @@ section {
 			animation: ani linear 10s infinite;
 
 			div {
-				width: 100%;
-				height: 100%;
+				width: 100px;
+				height: 100px;
 				border: 1px solid #fff;
 				position: absolute;
 				top: 0;
@@ -270,6 +272,9 @@ section {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: $tablet) {
 }
 
 @keyframes ani {
