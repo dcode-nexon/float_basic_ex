@@ -205,6 +205,7 @@ section article.custom5 h1::before {
   color: rgba(0, 0, 0, 0.2);
   transform-origin: top center;
   transform: skewX(-5deg) scaleY(0.97);
+  transition: 0.5s;
 }
 section article.custom5 h1::after {
   content: "A";
@@ -216,7 +217,16 @@ section article.custom5 h1::after {
   color: #209ce3;
   filter: brightness(1.1);
   transform-origin: top center;
-  transform: skewX(5deg) scaleY(0.95);
+  transform: rotateX(15deg);
+  transition: 0.5s;
+}
+section article.custom5 h1:hover::before {
+  transform: skewX(-15deg) scaleY(0.94);
+  color: rgba(0, 0, 0, 0.1);
+}
+section article.custom5 h1:hover::after {
+  transform: rotateX(30deg);
+  filter: brightness(1.13);
 }
 section article.custom6 {
   width: 40%;
