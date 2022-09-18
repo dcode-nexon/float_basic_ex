@@ -23,6 +23,7 @@ section {
 		width: 20%;
 		height: 25%;
 		min-height: 200px;
+		cursor: pointer;
 	}
 	//text type
 	article.txt {
@@ -58,6 +59,7 @@ section {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: 0.5s;
 		}
 	}
 	//custom1
@@ -92,6 +94,7 @@ section {
 	article.custom2 {
 		padding: 30px;
 		background-color: #fff;
+		transition: 0.5s;
 
 		.inner {
 			width: 100%;
@@ -101,16 +104,30 @@ section {
 			flex-wrap: wrap;
 			justify-content: center;
 			align-content: center;
+			transition: 0.5s;
 
 			h1 {
 				font: normal 50px/1 'monoton';
 				color: $color1;
 				margin-bottom: 10px;
+				transition: 0.5s;
 			}
 			p {
 				font: 14px/1 'arial';
 				color: $color1;
 				letter-spacing: 2px;
+				transition: 0.5s;
+			}
+		}
+
+		&:hover {
+			background: $color1;
+			.inner {
+				border: 1px solid #fff;
+				h1,
+				p {
+					color: #fff;
+				}
 			}
 		}
 	}
@@ -303,7 +320,6 @@ section {
 		}
 	}
 }
-
 @media screen and (max-width: $tablet) {
 	section {
 		article {
@@ -315,7 +331,6 @@ section {
 		}
 	}
 }
-
 @media screen and (max-width: $mobile) {
 	section {
 		article {

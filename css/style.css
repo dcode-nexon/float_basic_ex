@@ -28,6 +28,7 @@ section article {
   width: 20%;
   height: 25%;
   min-height: 200px;
+  cursor: pointer;
 }
 section article.txt {
   padding: 30px;
@@ -58,6 +59,7 @@ section article.pic video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s;
 }
 section article.custom1 {
   width: 60%;
@@ -88,6 +90,7 @@ section article.custom1 p {
 section article.custom2 {
   padding: 30px;
   background-color: #fff;
+  transition: 0.5s;
 }
 section article.custom2 .inner {
   width: 100%;
@@ -97,16 +100,29 @@ section article.custom2 .inner {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  transition: 0.5s;
 }
 section article.custom2 .inner h1 {
   font: normal 50px/1 "monoton";
   color: #00c8ff;
   margin-bottom: 10px;
+  transition: 0.5s;
 }
 section article.custom2 .inner p {
   font: 14px/1 "arial";
   color: #00c8ff;
   letter-spacing: 2px;
+  transition: 0.5s;
+}
+section article.custom2:hover {
+  background: #00c8ff;
+}
+section article.custom2:hover .inner {
+  border: 1px solid #fff;
+}
+section article.custom2:hover .inner h1,
+section article.custom2:hover .inner p {
+  color: #fff;
 }
 section article.custom3 {
   background: linear-gradient(150deg, #00c8ff, #a8b0ff);
