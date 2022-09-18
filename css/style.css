@@ -156,6 +156,7 @@ section article.custom3 p {
 }
 section article.custom4 ul {
   height: 100%;
+  perspective: 600px;
 }
 section article.custom4 ul li {
   height: 25%;
@@ -164,6 +165,8 @@ section article.custom4 ul li {
   align-items: center;
   gap: 20px;
   color: #00c8ff;
+  transform-origin: right center;
+  transition: 0.5s;
 }
 section article.custom4 ul li i {
   font-size: 20px;
@@ -173,6 +176,12 @@ section article.custom4 ul li strong {
 }
 section article.custom4 ul li:nth-of-type(odd) {
   background-color: #fff;
+  transform-origin: left center;
+}
+section article.custom4 ul li:hover {
+  transform: rotateY(30deg);
+  background-color: #00c8ff;
+  color: #fff;
 }
 section article.custom5 {
   background-color: #209ce3;

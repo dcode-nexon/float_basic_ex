@@ -170,6 +170,7 @@ section {
 	article.custom4 {
 		ul {
 			height: 100%;
+			perspective: 600px;
 
 			li {
 				height: 25%;
@@ -178,6 +179,8 @@ section {
 				align-items: center;
 				gap: 20px;
 				color: $color1;
+				transform-origin: right center;
+				transition: 0.5s;
 
 				i {
 					font-size: 20px;
@@ -188,6 +191,13 @@ section {
 
 				&:nth-of-type(odd) {
 					background-color: #fff;
+					transform-origin: left center;
+				}
+
+				&:hover {
+					transform: rotateY(30deg);
+					background-color: $color1;
+					color: #fff;
 				}
 			}
 		}
