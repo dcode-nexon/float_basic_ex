@@ -23,12 +23,17 @@ section {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  perspective: 600px;
 }
 section article {
   width: 20%;
   height: 25%;
   min-height: 200px;
   cursor: pointer;
+  opacity: 0;
+  transform: rotateY(60deg);
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.52, -0.66, 0.5, 1.65);
 }
 section article.txt {
   padding: 30px;
@@ -345,6 +350,11 @@ section article.custom6 .tit p {
   font: 12px/1 "arial";
   color: #eee;
   letter-spacing: 1px;
+}
+
+section.on article {
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 @keyframes ani {

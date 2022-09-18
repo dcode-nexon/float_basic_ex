@@ -113,6 +113,14 @@
       <a href="#">VIEW</a>
     </article>
   </section>
+
+  <script>
+    const frame = document.querySelector('section');
+    const boxs = frame.querySelectorAll('article');
+
+    boxs.forEach((el, idx) => el.style.transitionDelay = 0.1 * idx + 's');
+    setTimeout(() => frame.classList.add('on'), 1000);
+  </script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@ section {
 	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
+	perspective: 600px;
 
 	//common box style
 	article {
@@ -24,7 +25,12 @@ section {
 		height: 25%;
 		min-height: 200px;
 		cursor: pointer;
+		opacity: 0;
+		transform: rotateY(60deg);
+		transition-duration: 0.7s;
+		transition-timing-function: cubic-bezier(0.52, -0.66, 0.5, 1.65);
 	}
+
 	//text type
 	article.txt {
 		padding: 30px;
@@ -383,6 +389,14 @@ section {
 				letter-spacing: 1px;
 			}
 		}
+	}
+}
+
+//init motion
+section.on {
+	article {
+		opacity: 1;
+		transform: rotateY(0deg);
 	}
 }
 
