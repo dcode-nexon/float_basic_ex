@@ -130,6 +130,26 @@ section article.custom3 p {
   color: #fff;
   letter-spacing: 2px;
 }
+section article.custom4 ul {
+  height: 100%;
+}
+section article.custom4 ul li {
+  height: 25%;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #00c8ff;
+}
+section article.custom4 ul li i {
+  font-size: 20px;
+}
+section article.custom4 ul li strong {
+  font-size: 16px;
+}
+section article.custom4 ul li:nth-of-type(odd) {
+  background-color: #fff;
+}
 section article.custom5 {
   width: 40%;
 }
