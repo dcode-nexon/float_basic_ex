@@ -19,7 +19,7 @@ section {
   width: 100%;
   height: 100vh;
   padding: 5vh 5vw;
-  background-color: #efefef;
+  background-color: #eee;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -151,6 +151,41 @@ section article.custom4 ul li:nth-of-type(odd) {
   background-color: #fff;
 }
 section article.custom5 {
+  background-color: #209ce3;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+section article.custom5 h1 {
+  font: bold 190px/1 "verdana";
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+section article.custom5 h1::before {
+  content: "A";
+  display: block;
+  font: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0.2);
+  transform-origin: top center;
+  transform: skewX(-5deg) scaleY(0.97);
+}
+section article.custom5 h1::after {
+  content: "A";
+  display: block;
+  font: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #209ce3;
+  filter: brightness(1.1);
+  transform-origin: top center;
+  transform: skewX(5deg) scaleY(0.95);
+}
+section article.custom6 {
   width: 40%;
 }
 
