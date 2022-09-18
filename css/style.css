@@ -56,6 +56,8 @@ section article.txt p {
 }
 section article.pic {
   overflow: hidden;
+  background: #111;
+  position: relative;
 }
 section article.pic img,
 section article.pic video {
@@ -64,9 +66,32 @@ section article.pic video {
   object-fit: cover;
   transition: 0.5s;
 }
+section article.pic a {
+  width: 180px;
+  height: 30px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 12px/1 "orbitron";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: -15px;
+  transform: scale(2);
+  opacity: 0;
+  transition: 0.5s;
+}
 section article.pic:hover img,
 section article.pic:hover video {
   transform: scale(1.5);
+  opacity: 0.6;
+}
+section article.pic:hover a {
+  transform: scale(1);
+  opacity: 1;
 }
 section article.custom1 {
   width: 60%;
@@ -137,11 +162,13 @@ section article.custom3 {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  position: relative;
 }
 section article.custom3 h1 {
   font: 80px/1 "orbitron";
   color: #fff;
   margin-bottom: 10px;
+  transition: 0.5s;
 }
 section article.custom3 h1 span {
   font-size: 30px;
@@ -153,6 +180,36 @@ section article.custom3 p {
   font: 16px/1 "orbitron";
   color: #fff;
   letter-spacing: 2px;
+  transition: 0.5s;
+}
+section article.custom3 a {
+  width: 180px;
+  height: 30px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 14px/1 "orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+section article.custom3:hover h1 {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+section article.custom3:hover p {
+  transform: translateY(100px);
+  opacity: 0;
+}
+section article.custom3:hover a {
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 section article.custom4 ul {
   height: 100%;
