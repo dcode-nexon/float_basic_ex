@@ -210,6 +210,7 @@ section {
 		display: flex;
 		align-items: center;
 		perspective: 600px;
+		gap: 50px;
 
 		.box {
 			width: 100px;
@@ -244,6 +245,28 @@ section {
 				&:nth-of-type(6) {
 					transform: rotateX(180deg) translateZ(50px);
 				}
+			}
+		}
+		.tit {
+			h1 {
+				font: 28px/1 'orbitron';
+				color: #fff;
+				letter-spacing: 1px;
+				margin-bottom: 10px;
+
+				&::before {
+					content: '';
+					display: block;
+					width: 20px;
+					height: 2px;
+					background: #fff;
+					margin-bottom: 10px;
+				}
+			}
+			p {
+				font: 12px/1 'arial';
+				color: #eee;
+				letter-spacing: 1px;
 			}
 		}
 	}
